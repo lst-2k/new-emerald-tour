@@ -140,7 +140,7 @@
 					<th style="text-align:left;">Event/Venue</th>
 					<th style="text-align:left;">Date</th>
 					<th style="text-align:left;">Winner</th>
-					<th style="text-align:right;">Prize</th>
+					<th style="text-align:ri;">Prize</th>
 					</tr>
                 </thead>
                 <tbody id="history-body"></tbody>
@@ -301,7 +301,7 @@
             const histBody = document.getElementById('history-body');
             histBody.innerHTML = histRows.slice(1).map(col => {
                 if(!col[0] || col[0] === "Season") return "";
-                return `<tr><td>${col[0]}</td><td style="text-align:left; font-weight:bold;">${col[1]}</td><td style="text-align:left; font-weight:bold;"${col[2]}</td><td style="text-align:left; font-weight:bold;"${col[3]}</td><td style="color:#1b5e20;">${col[4]}</td><td style="text-align:right; font-weight:bold;"`;
+                return `<tr><td>${col[0]}</td><td style="text-align:left; font-weight:bold;">${col[1]}</td><td>${col[2]}</td><td>${col[3]}</td><td style="color:#1b5e20;">${col[4]}</td></tr>`;
             }).join('');
         }
         loadData();
